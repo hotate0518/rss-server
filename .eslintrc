@@ -1,0 +1,8 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "linebreak-style": ["error", "windows"],
+    "no-console": "off",
+    "import/no-unresolved": [2, { "ignore": ["^src"] }]
+  }
+}
