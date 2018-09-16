@@ -2,12 +2,12 @@
 const https = require('http');
 const FeedParser = require('feedparser');
 const moment = require('moment');
-const rss = require('./src/rss/rss.json');
+const rss = require('./src/rss/rss');
 
 let id = 0;
 const process = el => new Promise((resolve) => {
   const items = [];
-  https.get(el.url, (response) => {
+  https.get(el.feed, (response) => {
     const feedparser = new FeedParser({});
     let name;
     feedparser.on('meta', (meta) => {
@@ -48,7 +48,7 @@ exports.handler = async (event) => {
   console.log(`event received: ${JSON.stringify(event, null, 4)}`);
   id = 0;
   const processes = [];
-  rss.forEach((el) => {
+  rss.list.forEach((el) => {
     processes.push(process(el));
   });
   const rssList = await Promise.all(processes);
