@@ -6,5 +6,9 @@
   {
     "name": "ギズモード",
     "url": "http://www.gizmodo.jp/atom.xml"
+  },
+  {
+    "name":"キニ速",
+    "url": "http://blog.livedoor.jp/kinisoku/index.rdf"
   }
 ]
