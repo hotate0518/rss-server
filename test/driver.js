@@ -1,4 +1,4 @@
-const lambda = require('./index');
+const lambda = require('./server');
 
 const test = async () => {
   const result = await lambda.handler();

@@ -1,5 +1,5 @@
 const http = require('http');
-const lambda = require('./index');
+const lambda = require('../index');
 
 const header = {
   'Content-Type': 'application/json',
