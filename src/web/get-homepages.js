@@ -5,7 +5,8 @@ exports.main = async () => {
 
   feeds.list.forEach((el) => {
     homepages.push({
-      name: el.name,
+      id: el.id,
+      title: el.title,
       homepage: el.homepage,
     });
   });
