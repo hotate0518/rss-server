@@ -1,11 +1,13 @@
 exports.list = [
   {
-    name: 'VIPPERな俺',
+    id: 1,
+    title: 'VIPPERな俺',
     homepage: 'http://blog.livedoor.jp/news23vip/',
     feed: 'http://blog.livedoor.jp/news23vip/index.rdf',
   },
   {
-    name: 'キニ速',
+    id: 2,
+    title: 'キニ速',
     homepage: 'http://blog.livedoor.jp/kinisoku/',
     feed: 'http://blog.livedoor.jp/kinisoku/index.rdf',
   },
