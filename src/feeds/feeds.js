@@ -9,9 +9,4 @@ exports.list = [
     homepage: 'http://blog.livedoor.jp/kinisoku/',
     feed: 'http://blog.livedoor.jp/kinisoku/index.rdf',
   },
-  {
-    name: 'お宝エログ',
-    homepage: 'http://bakufu.jp/',
-    feed: 'http://bakufu.jp/feed/atom',
-  },
 ];
