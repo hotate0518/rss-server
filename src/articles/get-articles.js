@@ -3,7 +3,6 @@ const FeedParser = require('feedparser');
 const moment = require('moment');
 const feeds = require('../feeds/feeds');
 
-let id = 0;
 const process = el => new Promise((resolve) => {
   const items = [];
   http.get(el.feed, (response) => {
@@ -19,13 +18,12 @@ const process = el => new Promise((resolve) => {
       // chunkデータを保存する
       while (item) {
         const ep = {
-          id,
+          id: `${item.title} ${item.pubdate}`,
           site: name,
           title: item.title,
           mediaUrl: item.link,
           date: moment(item.pubDate).format('YYYY-MM-DD hh:mm:ss'),
         };
-        id += 1;
         items.push(ep);
         item = stream.read();
       }
