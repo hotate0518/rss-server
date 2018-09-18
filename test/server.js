@@ -26,7 +26,7 @@ http.createServer((request, response) => {
       event.service = 'get-homepages';
       break;
     default:
-      response.end();
+      event.service = 'get-articles';
       break;
   }
   responseRss(event, request, response);
